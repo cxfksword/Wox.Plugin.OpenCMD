@@ -1,0 +1,11 @@
+{
+    "ID":"D2D2C23B084D411DB99EE0C79D6C2A6C",
+    "ActionKeyword":"op",
+    "Name":"Wox.Plugin.OpenCMD",
+    "Description":"open windows command with current explorer opening folder",
+    "Author":"cxfksword",
+    "Version":"1.0",
+    "Language":"csharp",
+    "Website":"https://github.com/cxfksword/Wox.Plugin",
+    "ExecuteFileName":"Wox.Plugin.OpenCMD.dll"
+}
