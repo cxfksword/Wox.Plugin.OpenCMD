@@ -68,7 +68,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="lib\Interop.SHDocVw.dll" />
-    <EmbeddedResource Include="obj\Release\Interop.SHDocVw.dll" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="SHDocVw">
