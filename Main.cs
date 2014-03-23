@@ -29,12 +29,11 @@ namespace Wox.Plugin.OpenCMD
 
             SystemWindow win = null;
             GetOpeningWindows();
-            if (openingWindows.Count > 1)
+            if (openingWindows.Count > 0)
             {
-                // the first window is Wox, skip it!
-                if (openingWindows[1].Process.ProcessName == "explorer")
+                if (openingWindows[0].Process.ProcessName == "explorer")
                 {
-                    win = openingWindows[1];
+                    win = openingWindows[0];
                 }
             }
 
@@ -146,7 +145,7 @@ namespace Wox.Plugin.OpenCMD
             if (title.Length != 0 || (title.Length == 0 & hWnd != WinApi.statusbar))
             {
                 var window = new SystemWindow(hWnd);
-                if (window.IsAltTabWindow())
+                if (window.IsAltTabWindow() && !window.IsTopmostWindow())
                 {
                     openingWindows.Add(window);
                 }

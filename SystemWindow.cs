@@ -978,19 +978,24 @@ namespace Wox.Plugin.OpenCMD
             return handleWalk == HWnd;
         }
 
-        private bool IsToolWindow()
+        public bool IsToolWindow()
         {
             return (ExtendedStyle & WindowExStyleFlags.TOOLWINDOW) == WindowExStyleFlags.TOOLWINDOW;
         }
 
-        private bool IsAppWindow()
+        public bool IsAppWindow()
         {
             return (ExtendedStyle & WindowExStyleFlags.APPWINDOW) == WindowExStyleFlags.APPWINDOW;
         }
 
-        private bool IsControlParent()
+        public bool IsControlParent()
         {
             return (ExtendedStyle & WindowExStyleFlags.CONTROLPARENT) == WindowExStyleFlags.CONTROLPARENT;
+        }
+
+        public bool IsTopmostWindow()
+        {
+            return (ExtendedStyle & WindowExStyleFlags.TOPMOST) == WindowExStyleFlags.TOPMOST;
         }
 
         /// <summary>
