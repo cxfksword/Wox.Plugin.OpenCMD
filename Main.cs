@@ -16,6 +16,13 @@ namespace Wox.Plugin.OpenCMD
         private PluginInitContext context;
         private static List<SystemWindow> openingWindows = new List<SystemWindow>();
 
+        static Main()
+        {
+            // use to auto load Interop.SHDocVw.dll from resources
+            // only copy to plugin folder can not load correctly
+            AppDomain.CurrentDomain.AssemblyResolve += new ResolveEventHandler(CurrentDomain_AssemblyResolve);
+        }
+
         public List<Result> Query(Query query)
         {
             var list = new List<Result>();
@@ -146,6 +153,21 @@ namespace Wox.Plugin.OpenCMD
             }
 
             return true;
+        }
+
+        public static System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
+        {
+            string dllName = args.Name.Contains(',') ? args.Name.Substring(0, args.Name.IndexOf(',')) : args.Name.Replace(".dll", "");
+
+            dllName = dllName.Replace(".", "_");
+
+            if (dllName.EndsWith("_resources")) return null;
+
+            System.Resources.ResourceManager rm = new System.Resources.ResourceManager(typeof(Main).Namespace + ".Properties.Resources", System.Reflection.Assembly.GetExecutingAssembly());
+
+            byte[] bytes = (byte[])rm.GetObject(dllName);
+
+            return System.Reflection.Assembly.Load(bytes);
         }
 
 
