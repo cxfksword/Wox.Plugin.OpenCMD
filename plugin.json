@@ -6,6 +6,6 @@
     "Author":"cxfksword",
     "Version":"1.0",
     "Language":"csharp",
-    "Website":"https://github.com/cxfksword/Wox.Plugin",
+    "Website":"https://github.com/cxfksword/Wox.Plugin.OpenCMD",
     "ExecuteFileName":"Wox.Plugin.OpenCMD.dll"
 }
