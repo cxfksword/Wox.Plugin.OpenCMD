@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="Wox.Plugin">
       <HintPath>lib\Wox.Plugin.dll</HintPath>
-      <Private>False</Private>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +67,7 @@
     <Content Include="Images\app.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="lib\Interop.SHDocVw.dll" />
     <EmbeddedResource Include="obj\Release\Interop.SHDocVw.dll" />
   </ItemGroup>
   <ItemGroup>
