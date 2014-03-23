@@ -7,7 +7,7 @@ An [Wox](https://github.com/qianlifeng/Wox) plugin that easy to open a shell in 
 ![screenshot: `op `](preview.gif)
 
 #Usage
-1. Open explorer and open your directory.
+1. Open explorer and goto your directory.
 2. Awake Wox.
 3. Type `op` and press `Enter`, then will open a shell in current directory.
 
