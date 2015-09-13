@@ -6,6 +6,7 @@
     "Author":"cxfksword",
     "Version":"1.0.1",
     "Language":"csharp",
-    "Website":"https://github.com/cxfksword/Wox.Plugin.OpenCMD",
+    "Website": "https://github.com/cxfksword/Wox.Plugin.OpenCMD",
+    "IcoPath": "Images\\app.png",          
     "ExecuteFileName":"Wox.Plugin.OpenCMD.dll"
 }
