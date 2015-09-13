@@ -41,8 +41,8 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Wox.Plugin">
-      <HintPath>lib\Wox.Plugin.dll</HintPath>
+    <Reference Include="Wox.Plugin, Version=1.2.0.445, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Wox.Plugin.1.2.0.445\lib\net35\Wox.Plugin.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -59,6 +59,7 @@
     <Compile Include="winapi.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="plugin.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

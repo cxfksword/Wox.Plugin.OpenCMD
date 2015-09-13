@@ -52,7 +52,7 @@ namespace Wox.Plugin.OpenCMD
                         {
                             var path = window.LocationURL.Replace("file:///", "");
                             StartShell(path);
-                            this.context.HideApp();
+                            this.context.API.HideApp();
                             return list;
                         }
                     }
